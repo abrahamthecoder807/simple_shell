@@ -1,11 +1,13 @@
 #include "shell.h"
+#include <stdio.h>
 
 /**
  * interactive - returns true if shell is interactive mode
  * @info: struct address
- *
+ * 
  * Return: 1 if interactive mode, 0 otherwise
  */
+
 int interactive(info_t *info)
 {
 	return (isatty(STDIN_FILENO) && info->readfd <= 2);
@@ -71,4 +73,25 @@ int _atoi(char *s)
 		output = result;
 
 	return (output);
+
+}
+
+int main(void)
+{
+info_t info;
+info.readfd = 2;
+int isInteractive = interactive(&info);
+if (isInteractive)
+{
+
+printf("The shell is running in interactive mode.\n");
+}
+
+else
+{
+
+printf("The shell is not running in interactive mode.\n");
+}
+
+return (0);
 }
