@@ -52,7 +52,7 @@ typedef struct liststr
 
 /**
  *struct passinfo - contains pseudo-arguements to pass into a function,
- *		allowing uniform prototype for function pointer struct
+ *allowing uniform prototype for function pointer struct
  *@arg: a string generated from getline containing arguements
  *@argv: an array of strings generated from arg
  *@path: a string path for the current command
@@ -177,6 +177,10 @@ void remove_comments(char *);
 int _myexit(info_t *);
 int _mycd(info_t *);
 int _myhelp(info_t *);
+int execute_builtin_commands(char **tokens, char *inputLine);
+void _open_help(void);
+void _print_env(void);
+int _handle_exit(char **tokens, char *inputLine);
 
 /* toem_builtin1.c */
 int _myhistory(info_t *);
