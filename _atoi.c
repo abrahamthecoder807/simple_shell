@@ -74,12 +74,13 @@ int _atoi(char *s)
 	return (output);
 
 }
-
+int isInteractive;
 int main(void)
 {
 info_t info;
 info.readfd = 2;
-int isInteractive = interactive(&info);
+
+isInteractive = interactive(&info);
 if (isInteractive)
 {
 
