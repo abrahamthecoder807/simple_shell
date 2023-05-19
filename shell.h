@@ -178,7 +178,7 @@ int _myexit(info_t *);
 int _mycd(info_t *);
 int _myhelp(info_t *);
 int execute_builtin_commands(char **tokens, char *inputLine);
-void _open_help(void);
+void _open_shell(void);
 void _print_env(void);
 int _handle_exit(char **tokens, char *inputLine);
 

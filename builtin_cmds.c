@@ -28,7 +28,7 @@ int execute_builtin_commands(char **tokens, char *inputLine)
 			}
 			else if (index == 2)
 			{
-				_open_help();
+				_open_shell();
 				return (1);
 			}
 			else if (index == 3)
