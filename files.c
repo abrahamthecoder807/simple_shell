@@ -39,10 +39,6 @@ int countDelimiters(char *inputString, char *delimiters)
 
 	while (delimiters[i])
 	{
-		if (delimiters[i] == NULL)
-		{
-			return (0);
-		}
 
 		j = 0;
 		while (inputString[j])
