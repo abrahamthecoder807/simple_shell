@@ -4,7 +4,6 @@
  * execute_builtin_commands - Executes a built-in command
  * @tokens: parameter tokens`
  * @inputLine: builtin commands to check for
- *
  * Return: 1 if it is a built-in command, or 0 if not
  */
 int execute_builtin_commands(char **tokens, char *inputLine)
@@ -18,7 +17,7 @@ int execute_builtin_commands(char **tokens, char *inputLine)
 		{
 			if (index == 0)
 			{
-				_handle_exit(tokens, inputLine);
+				handle_exit(tokens, inputLine);
 				return (1);
 			}
 			else if (index == 1)
@@ -28,17 +27,11 @@ int execute_builtin_commands(char **tokens, char *inputLine)
 			}
 			else if (index == 2)
 			{
-				_open_shell();
-				return (1);
-			}
-			else if (index == 3)
-			{
-				_print_env();
+				print_enviro();
 				return (1);
 			}
 		}
 		index++;
 	}
-
 	return (0);
 }
