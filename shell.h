@@ -12,6 +12,8 @@
 #include <fcntl.h>
 #include <errno.h>
 
+extern char ** environ;
+
 int execute_builtin_commands(char **tokens, char *inputLine);
 void handle_exit(char **command, char *input_line);
 void print_enviro(void);
