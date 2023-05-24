@@ -12,7 +12,7 @@
 #include <fcntl.h>
 #include <errno.h>
 
-extern char ** environ;
+extern char **environ;
 
 int execute_builtin_commands(char **tokens, char *inputLine);
 void handle_exit(char **command, char *input_line);
