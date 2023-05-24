@@ -85,7 +85,7 @@ void _puts(char *str)
 void *_realloc(void *ptr, unsigned int init_size, unsigned int new_size)
 {
 	char *nptr;
-	unsigned int i;
+	unsigned int i = 0;
 
 	if (new_size == init_size)
 		return (ptr);
